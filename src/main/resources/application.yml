@@ -1,0 +1,35 @@
+server:
+  port: 8001
+
+spring:
+  profiles:
+    active: dev
+
+langchain4j:
+  #openai模型配置
+  open-ai:
+    chat-model:
+      #base-url: http://langchain4j.dev/demo/openai/v1
+      base-url: https://api.deepseek.com
+      api-key: ${OPENAI_API_KEY}
+      model-name: deepseek-chat
+      #日志开关
+      log-requests: true
+      log-responses: true
+  #本地ollama模型配置
+  ollama:
+    chat-model:
+      base-url: http://localhost:11434
+      log-requests: true
+      log-responses: true
+      model-name: deepseek-r1:1.5b
+  #阿里云百炼模型配置
+  community:
+    dashscope:
+      chat-model:
+        api-key: ${OPENAI_API_KEY}
+        model-name: qwen-max
+
+logging:
+  level:
+    root: DEBUG
