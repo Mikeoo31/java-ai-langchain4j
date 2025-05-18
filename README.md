@@ -39,3 +39,17 @@
         <artifactId>langchain4j-community-dashscope-spring-boot-starter</artifactId>
     </dependency>
 ```
+
+### AiServices
+
+- AiService是langchain4j的核心接口，它提供了一系列的API，可以让你轻松地与大型语言模型进行交互。
+- 核心原理：组装Assistant接口以及其他组件，通过反射机制创建出Assistant的代理对象，通过代理对象封装一些基础逻辑功能。
+
+#### AIService可处理最常见的操作：
+- 为大语言模型格式化输入内容
+- 解析大语言模型的输出结果
+
+#### 它们还支持更高级的功能：
+- 聊天记忆 Chat memory
+- 工具 Tools
+- 检索增强生成 RAG
