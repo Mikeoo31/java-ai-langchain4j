@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class JavaAiLangChain4j {
+public class XiaoZhiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(JavaAiLangChain4j.class, args);
+        SpringApplication.run(XiaoZhiApplication.class, args);
     }
 }
