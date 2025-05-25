@@ -4,6 +4,10 @@ server:
 spring:
   profiles:
     active: dev
+  #MongoDB连接配置
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/chat_memory_db
 
 langchain4j:
   #openai模型配置
