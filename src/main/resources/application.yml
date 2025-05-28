@@ -8,6 +8,17 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/chat_memory_db
+  #数据库连接配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/guiguxiaozhi?useUnicode:true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#开启MybatisPlus日志输出
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 langchain4j:
   #openai模型配置
