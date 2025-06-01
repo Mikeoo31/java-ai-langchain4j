@@ -7,10 +7,14 @@ import dev.langchain4j.service.spring.AiService;
 
 import static dev.langchain4j.service.spring.AiServiceWiringMode.EXPLICIT;
 
+/**
+ * @author wujihui
+ */
 @AiService(
         wiringMode = EXPLICIT,
         chatModel = "qwenChatModel",
-        chatMemoryProvider = "xiaozhiChatMemoryProvider"
+        chatMemoryProvider = "xiaozhiChatMemoryProvider",
+        tools = "appointmentTool" //tools配置
 )
 public interface XiaoZhiChatAssistant {
 

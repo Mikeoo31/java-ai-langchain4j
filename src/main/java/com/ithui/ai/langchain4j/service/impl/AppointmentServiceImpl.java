@@ -19,7 +19,7 @@ import org.springframework.stereotype.Service;
  * @author wujihui
  * @version v1.0.0
  */
-
+@Service
 public class AppointmentServiceImpl extends ServiceImpl<AppointmentMapper, Appointment>
         implements AppointmentService{
 
