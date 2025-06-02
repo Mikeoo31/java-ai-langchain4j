@@ -15,7 +15,7 @@ import static dev.langchain4j.service.spring.AiServiceWiringMode.EXPLICIT;
         chatModel = "qwenChatModel",
         chatMemoryProvider = "xiaozhiChatMemoryProvider",
         tools = "appointmentTool" ,//tools配置
-        contentRetriever = "xiaozhiContentRetriever" //contentRetriever配置
+        contentRetriever = "contentRetrieverXiaozhiPincone" //contentRetriever配置
 )
 public interface XiaoZhiChatAssistant {
 

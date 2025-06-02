@@ -44,6 +44,10 @@ langchain4j:
       chat-model:
         api-key: ${OPENAI_API_KEY}
         model-name: qwen-max
+      #阿里向量大模型配置
+      embedding-model:
+        api-key: sk-a9e5312d94374ad2a8453de240c1933d
+        model-name: text-embedding-v3
 
 logging:
   level:
