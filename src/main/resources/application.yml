@@ -48,6 +48,10 @@ langchain4j:
       embedding-model:
         api-key: sk-a9e5312d94374ad2a8453de240c1933d
         model-name: text-embedding-v3
+      #流式对话模型配置
+      streaming-chat-model:
+        api-key: ${DASH_SCOPE_API_KEY}
+        model-name: qwen-plus
 
 logging:
   level:
