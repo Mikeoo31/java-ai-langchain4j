@@ -35,4 +35,6 @@ public class XiaoZhiController {
     public Flux<String> chat(@RequestBody ChatForm chatForm){
         return xiaoZhiChatAssistant.chat(chatForm.getMemoryId(), chatForm.getMessage());
     }
+
+
 }
