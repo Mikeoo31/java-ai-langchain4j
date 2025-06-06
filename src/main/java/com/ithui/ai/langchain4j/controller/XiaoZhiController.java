@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import reactor.core.publisher.Flux;
+
 
 /**
  * <p>
@@ -28,9 +30,9 @@ public class XiaoZhiController {
     @Autowired
     private XiaoZhiChatAssistant xiaoZhiChatAssistant;
 
-    @PostMapping("/chat")
+    @PostMapping(value = "/chat",produces = "text/stream;charset=utf-8")
     @Operation(summary = "聊天接口", description = "聊天接口")
-    public String chat(@RequestBody ChatForm chatForm){
+    public Flux<String> chat(@RequestBody ChatForm chatForm){
         return xiaoZhiChatAssistant.chat(chatForm.getMemoryId(), chatForm.getMessage());
     }
 }
